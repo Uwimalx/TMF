@@ -21,7 +21,7 @@ case $backup in
   ;;
 esac
 
-printf "要用oh my zsh原版脚本安装吗？这将不会改变主题且安装插件(输入yes确定)"
+printf "要用oh my zsh原版脚本安装吗？这将不会改变主题或者安装插件(输入yes确定)"
 read origin
 case $origin in
   y|Y|yes|Yes)

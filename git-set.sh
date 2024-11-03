@@ -5,7 +5,7 @@ git config --global user.name "$username"
 printf "输入邮箱："
 read email
 git config --global user.email $email
-echo "生成SSH密钥(请一直按回车)"
+echo "生成SSH公钥(请一直按回车)"
 ssh-keygen -t rsa -C "$email"
 echo "完成！如下"
 cat $HOME/.ssh/id_rsa.pub

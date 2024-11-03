@@ -1,4 +1,5 @@
 #!/data/data/com.termux/files/usr/bin/bash
+
 #设置启动页面↓
 #nano $PREFIX/etc/motd
 
@@ -41,8 +42,6 @@ echo "alias chfont='$HOME/.termux/fonts.sh'" >> "$HOME/.zshrc"
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "$HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting" --depth 1
 echo "source $HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> "$HOME/.zshrc"
 
-chsh -s zsh
-
 git clone https://github.com/zsh-users/zsh-autosuggestions.git "$HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions" --depth 1
 echo "source $HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh" >> "$HOME/.zshrc"
 case $mirror in
@@ -50,9 +49,11 @@ case $mirror in
   git config --global --unset url.https://gitclone.com/.insteadof
 esac
 
+chsh -s zsh
+
 clear
 echo "oh-my-zsh安装完成！"
-sleep 0.5s
+sleep 1s
 echo "选择你的配色主题~"
 $HOME/.termux/colors.sh
 
