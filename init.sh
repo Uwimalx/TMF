@@ -7,7 +7,7 @@ read -p "是否使用一键替换国内源镜像？[Y/N]" mirror
 case $mirror in
 [Yy]es|[Yy])
   ln -s "$PREFIX/etc/termux/mirrors/chinese_mainland/" "$PREFIX/etc/termux/chosen_mirrors"
-;;
+  ;;
 *)
   termux-change-repo
 esac
