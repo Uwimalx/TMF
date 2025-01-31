@@ -3,7 +3,8 @@
 #设置启动页面↓
 #nano $PREFIX/etc/motd
 
-read -p "是否备份？(输入yes确定)" backup
+printf "是否备份？(输入yes确定)"
+read backup
 case $backup in
   y|Y|yes|Yes)
   mv "$HOME/.termux" "$HOME/.termux.bak.$(date +%Y.%m.%d-%H:%M:%S)"
@@ -14,7 +15,7 @@ case $backup in
   rm -f $HOME/.zshrc
 esac
 
-echo "是否使用gitclone.com镜像源？(输入yes确定)"
+printf "是否使用gitclone.com镜像源？(输入yes确定)"
 read mirror
 case $mirror in
   y|Y|yes|Yes)

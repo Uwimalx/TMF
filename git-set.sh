@@ -1,7 +1,9 @@
 #!/data/data/com.termux/files/usr/bin/bash
-read -p "输入用户名：" username
+printf "输入用户名："
+read username
 git config --global user.name "$username"
-read -p "输入邮箱：" email
+printf "输入邮箱："
+read email
 git config --global user.email $email
 read -p "是否生成SSH密钥？[Y/N]" keygen
 case $keygen in
