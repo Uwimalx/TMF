@@ -17,9 +17,9 @@ Termux more friendly，让你的 Termux 更友好~
 sh -c "$(curl -fsSL https://github.com/Uwimalx/TMF/raw/main/init.sh)"
 ```
 
-镜像（使用 gitdl.cn）：
+镜像：
 ```bash
-sh -c "$(curl -fsSL https://gitdl.cn/https://github.com/Uwimalx/TMF/raw/main/init.sh)"
+sh -c "$(curl -fsSL https://gh-proxy.com/https://github.com/Uwimalx/TMF/raw/main/init.sh)"
 ```
 
 > [!TIP]
