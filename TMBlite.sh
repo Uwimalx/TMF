@@ -1,6 +1,6 @@
 #!/data/data/com.termux/files/usr/bin/bash
 
-echo "使用镜像源gitdl.cn"
+echo "使用镜像源gh-proxy.com"
 echo
 echo "设置启动页面↓
 运行 nano $PREFIX/etc/motd"
@@ -28,10 +28,10 @@ printf "要用oh my zsh原版脚本安装吗？这将不会改变主题或者安
 read origin
 case $origin in
   y|Y|yes|Yes)
-  sh -c "$(curl -fsSL https://gitdl.cn/https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+  sh -c "$(curl -fsSL https://gh-proxy.com/https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
   ;;
   *)
-  git clone https://gitdl.cn/https://github.com/ohmyzsh/ohmyzsh.git "$HOME/.oh-my-zsh" --depth 1
+  git clone https://gh-proxy.com/https://github.com/ohmyzsh/ohmyzsh.git "$HOME/.oh-my-zsh" --depth 1
   cp "$HOME/.oh-my-zsh/templates/zshrc.zsh-template" "$HOME/.zshrc"
 esac
 
@@ -40,10 +40,10 @@ sed -i '1iZSH_THEME="agnoster"' "$HOME/.zshrc"
 #去掉累赘的用户名@主机
 sed -i '92{s/^/#/}' "$HOME/.oh-my-zsh/themes/agnoster.zsh-theme"
 
-git clone https://gitdl.cn/https://github.com/zsh-users/zsh-syntax-highlighting.git "$HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting" --depth 1
+git clone https://gh-proxy.com/https://github.com/zsh-users/zsh-syntax-highlighting.git "$HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting" --depth 1
 echo "source $HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> "$HOME/.zshrc"
 
-git clone https://gitdl.cn/https://github.com/zsh-users/zsh-autosuggestions.git "$HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions" --depth 1
+git clone https://gh-proxy.com/https://github.com/zsh-users/zsh-autosuggestions.git "$HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions" --depth 1
 echo "source $HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh" >> "$HOME/.zshrc"
 
 chsh -s zsh
